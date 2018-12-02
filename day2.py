@@ -21,7 +21,8 @@ def part1():
 
 
 def part2():
-    """Do part 2.
+    """Look for pairs of 'words' in which exactly one character
+    differs. Check as few pairs as possible.
     """
     done = []
     with open('input/day2.txt', 'r') as f:
@@ -33,6 +34,7 @@ def part2():
                     return "".join(x for x, y in zip(w1, w2) if x == y)
             done.append(w1)
     return None
+
 
 if __name__ == "__main__":
     import sys
