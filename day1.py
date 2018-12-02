@@ -2,6 +2,8 @@
 """
 Advent of Code 2018
 Day 1
+
+For now, I'll try to use only built-in stuff.
 """
 
 
@@ -19,6 +21,8 @@ def part2(iter=0, freq=0, freqs=None):
     """Keep computing the cumulative sum of the numbers in the input,
     until we get the same sum twice. Keep count of the file iterations
     too, just for fun.
+
+    Amazing, it's about 500x faster with sets, cf lists.
     """
     freqs = {0} if freqs is None else freqs
 
