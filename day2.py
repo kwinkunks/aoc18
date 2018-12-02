@@ -29,7 +29,7 @@ def part2():
         for w1 in f:
             w1 = w1.strip()
             for w2 in done:
-                match = [ord(x) != ord(y) for x, y in zip(w1, w2)]
+                match = [x != y for x, y in zip(w1, w2)]
                 if sum(match) == 1:
                     return "".join(x for x, y in zip(w1, w2) if x == y)
             done.append(w1)
