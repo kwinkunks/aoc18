@@ -31,6 +31,7 @@ def part2():
             for w2 in done:
                 match = [x != y for x, y in zip(w1, w2)]
                 if sum(match) == 1:
+                    # I don't like this.
                     return "".join(x for x, y in zip(w1, w2) if x == y)
             done.append(w1)
     return None
